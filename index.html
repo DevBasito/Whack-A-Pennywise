@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./wac.css">
+    <title>Whac-A-Pennywise</title>
+</head>
+
+<body>
+    <div id="gameArea">
+        <audio id="laugh">
+            <source src="./img/laugh.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="whack">
+            <source src="./img/whack.mp3" type="audio/mpeg">
+        </audio>
+        <div class="text-center font-weight-bolder" id="bodytext">
+            <h1>Whac-A-Pennywise</h1>
+            <h4>SCORE: <span id="score"></span></h4>
+
+        </div>
+        <div class="container w-75 p-5" id="holes">
+
+            <div class="px-2 pt-3" id="hole"></div>
+            <div class="px-2 pt-3" id="hole"></div>
+            <div class="px-2 pt-3" id="hole"></div>
+            <div class="px-2 pt-3" id="hole"></div>
+            <div class="px-2 pt-3" id="hole"></div>
+            <div class="px-2 pt-3" id="hole"></div>
+            <div class="px-2 pt-3" id="hole"></div>
+            <div class="px-2 pt-3" id="hole"></div>
+
+        </div>
+        <div class="text-center my-3" id="btn">
+            <button class="btn btn-success btn-lg" id="play">PLAY</button>
+            <button class="btn btn-danger btn-lg" id="stop">STOP</button>
+
+        </div>
+
+        <img src="./img/whac.png" class="whac">
+    </div>
+
+    <div id="gameOver">
+        <button class="btn-success btn-lg w-100" id="playAgain">PLAY AGAIN</button>
+        <marquee direction="up"behavior="scroll" scrollamount="20" height="10%">
+            <img src="./img/it.png" id="marque" width="100%">
+            <h1 class="text-center p-5">
+                Game Over<span class="text-danger">!!!.</span> 
+                <br> You scored <span id="result"></span>.
+                <br> Tasty, tasty, beautiful fear.
+                <br> Time to Float 
+            </h1>
+            
+        </marquee> 
+        <audio id="buzzer">
+            <source src="./img/Buzzer.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="icecream">
+            <source src="./img/icecream.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="elaugh">
+            <source src="./img/elaugh.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <footer class="text-center p-3"><strong><em>Powered by</em> DevBasito</strong></footer>
+</body>
+
+<script src="./wac.js"></script>
+
+</html>
