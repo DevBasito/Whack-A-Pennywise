@@ -45,6 +45,7 @@ playbtn.addEventListener('click', function () {
         currentTime--;
         document.getElementById('timer').innerHTML= currentTime;
         if (currentTime == 0) {
+            clearInterval(countDownTimer);
             gameStop();
         }
     }
@@ -55,7 +56,7 @@ playbtn.addEventListener('click', function () {
 function gameStop( ) {
     let buzzer= document.getElementById('buzzer');
     buzzer.play();
-    clearInterval(countDownTimer);
+    
     clearInterval(game);
     let gameArea= document.querySelector('#gameArea');
     gameArea.style.display= 'none';
