@@ -27,6 +27,7 @@ cursor: none;
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 1;
+    width: 130px;
 }
 #gameOver{
     display: none;
