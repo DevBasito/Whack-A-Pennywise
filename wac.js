@@ -8,18 +8,20 @@ let btn = document.getElementById('btn');
 let whacArea = document.getElementById('holes')
 let x = 0;
 
-document.getElementById('score').innerHTML = x
+
+document.getElementById('score').innerHTML = x;
+
 
 playbtn.addEventListener('click', function () {
 
     playbtn.disabled = true;
     let laugh = document.getElementById('laugh');
     laugh.play();
+    let currentTime= 30;
 
     game = setInterval(function () {
         let num = Math.floor(Math.random() * 8);
         let hole = holes[num];
-        console.log(hole);
         let image = document.createElement('img');
         image.setAttribute('src', './img/pennywise.png');
         image.setAttribute('class', 'mole');
@@ -38,9 +40,20 @@ playbtn.addEventListener('click', function () {
 
     }, 900)
 
+
+    function countdown( ) {
+        currentTime--;
+        document.getElementById('timer').innerHTML= currentTime;
+        if (currentTime == 0) {
+            clearInterval(countDownTimer);
+            gameStop();
+        }
+    }
+    let countDownTimer= setInterval(countdown, 3000)
+
 })
 
-stopbtn.addEventListener('click', function () {
+function gameStop( ) {
     let buzzer= document.getElementById('buzzer');
     buzzer.play();
 
@@ -57,12 +70,14 @@ stopbtn.addEventListener('click', function () {
     result.innerHTML= x;
   
     let elaugh= document.getElementById('elaugh');
-    elaugh.play();
-})
+    elaugh.play(); 
 
-playAgain.addEventListener('click', function(){
-    window.location.replace('./index.html')
-})
+    playAgain.addEventListener('click', function(){
+        window.location.replace('./index.html')
+    })
+}
+
+stopbtn.addEventListener('click', gameStop)
 
 
 function cursor(e) {
@@ -71,3 +86,5 @@ function cursor(e) {
 }
 
 whacArea.addEventListener('mousemove', cursor);
+
+
