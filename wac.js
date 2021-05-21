@@ -34,9 +34,9 @@ playbtn.addEventListener('click', function () {
 
         setTimeout(function () {
             hole.removeChild(image)
-        }, 1900)
+        }, 800)
 
-    }, 2000)
+    }, 900)
 
 })
 
