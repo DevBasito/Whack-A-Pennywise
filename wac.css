@@ -51,6 +51,7 @@ marquee h1{
     }
     .whac{
         height: 80px;
+        width: 80px;
     } 
 }
 
