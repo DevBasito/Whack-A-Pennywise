@@ -72,6 +72,20 @@
         </audio>
     </div>
     <footer class="text-center p-3"><strong><em>Powered by</em> DevBasito</strong></footer>
+    
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener('load', function() {
+        navigator.serviceWorker.register('serviceWorker.js').then(function(registration) {
+        // Registration was successful
+        console.log("ServiceWorker registration successful with scope: ", registration.scope);
+        }, function(err) {
+        // registration failed :(
+        console.log("ServiceWorker registration failed: ", err);
+        });
+        });
+      }
+   </script>
 </body>
 
 <script src="./wac.js"></script>
