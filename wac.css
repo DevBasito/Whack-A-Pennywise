@@ -1,4 +1,7 @@
-body{background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+/* body{background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+} */
+body{
+    background: url('./d.jpg')
 }
 footer{color: indigo;}
 #bodytext{color:indigo}
@@ -52,6 +55,7 @@ marquee h1{
     .whac{
         height: 60px;
         width: 80px;
-    } 
+    }
+    
 }
 
