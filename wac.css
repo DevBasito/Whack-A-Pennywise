@@ -1,7 +1,7 @@
 /* body{background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
 } */
 body{
-    background: url('./d.jpg')
+    background: "#ffffff"
 }
 footer{color: indigo;}
 #bodytext{color:indigo}
