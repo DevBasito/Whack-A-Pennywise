@@ -1,10 +1,11 @@
 /* body{background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
 } */
 body{
-    background: "#ffffff"
+    background: url('./d.jpeg')
 }
-footer{color: indigo;}
-#bodytext{color:indigo}
+footer{color: whitesmoke;}
+footer a {text-decoration: none;}
+#bodytext{color:whitesmoke}
 #holes{display: grid;
 grid-template-columns: repeat(4, 1fr) ;
 justify-items: center;
@@ -36,7 +37,7 @@ cursor: none;
     display: none;
 }
 marquee h1{
-    color: indigo;
+    color: whitesmoke;
 }
 
 @media screen and (max-width: 900px) {
